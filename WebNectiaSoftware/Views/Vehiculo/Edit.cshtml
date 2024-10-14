@@ -1,0 +1,20 @@
+﻿@model Vehiculo
+
+<h2>Editar Vehículo</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div>
+        <label>Marca</label>
+        <input asp-for="Marca" />
+    </div>
+    <div>
+        <label>Modelo</label>
+        <input asp-for="Modelo" />
+    </div>
+    <div>
+        <label>Año</label>
+        <input asp-for="Año" type="number" />
+    </div>
+    <button type="submit">Guardar</button>
+</form>

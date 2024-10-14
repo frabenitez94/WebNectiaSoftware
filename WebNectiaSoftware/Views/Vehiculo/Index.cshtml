@@ -1,0 +1,54 @@
+﻿@model List<Vehiculo>
+
+    <h2>Listado de Vehículos</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Año</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var vehiculo in Model)
+            {
+            <tr>
+                <td>@vehiculo.Marca</td>
+                <td>@vehiculo.Modelo</td>
+                <td>@vehiculo.Año</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@vehiculo.Id">Editar</a> |
+                    <!-- Asegurarse de incluir el data-id -->
+                    <button class="delete-button" data-id="@vehiculo.Id">Eliminar</button>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+    <a asp-action="Create" class="btn btn-primary">Crear nuevo Vehículo</a>
+    @section Scripts {
+    <script>
+        $(document).ready(function () {
+            $(".delete-button").click(function () {
+                const id = $(this).data("id");
+
+                if (confirm("¿Estás seguro de que quieres eliminar este vehículo?")) {
+                    $.ajax({
+                        url: `/Vehiculo/Delete/${id}`,
+                        method: "POST",  // Enviar la solicitud como POST
+                        success: function () {
+                            alert("Vehículo eliminado");
+                            location.reload();  // Recargar la página después de la eliminación
+                        },
+                        error: function () {
+                            alert("Error al eliminar el vehículo");
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+    }

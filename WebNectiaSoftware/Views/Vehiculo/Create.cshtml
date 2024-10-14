@@ -1,0 +1,19 @@
+﻿@model Vehiculo
+
+<h2>Crear Vehículo</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label>Marca</label>
+        <input asp-for="Marca" />
+    </div>
+    <div>
+        <label>Modelo</label>
+        <input asp-for="Modelo" />
+    </div>
+    <div>
+        <label>Año</label>
+        <input asp-for="Año" type="number" />
+    </div>
+    <button type="submit">Guardar</button>
+</form>
