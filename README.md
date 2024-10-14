@@ -89,4 +89,4 @@ Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo [LICENS
 
 ## Contacto
 
-Para más información, contacta a [tu-email@example.com](mailto:frabenitez94@gmail.com).
+Para más información, contacta a [frabenitez94@gmail.com](mailto:frabenitez94@gmail.com).
