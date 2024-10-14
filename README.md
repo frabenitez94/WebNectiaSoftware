@@ -46,7 +46,7 @@ Nectia Software es una aplicación web diseñada para la gestión de vehículos.
 
    ```json
    "ConnectionStrings": {
-       "DefaultConnection": "Server=localhost;Database=NectiaDB;Trusted_Connection=True;TrustServerCertificate=True;"
+       "DefaultConnection": "Server=localhost;Database=NECTIASOFTWARE;Trusted_Connection=True;TrustServerCertificate=True;"
    }
    ```
 
